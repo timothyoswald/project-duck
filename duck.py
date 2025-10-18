@@ -1,5 +1,6 @@
 from cmu_graphics import *
 import random
+from helper import getIMGpath
 
 class Duck():
     def __init__(self, x, y, width, height):
@@ -12,23 +13,27 @@ class Duck():
         self.gravity = 1
         self.jumpPower = 10
         self.spriteIndex = 0
-        self.stillRightSprites = ["Images/duckstand1_good.png",
-                                  r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckstand2_good.png",
-                                  r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckstand3_good.png",
-                                  r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckstand4_good.png"]
-        self.stillLeftSprites = [r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckstand1_goodopp.png",
-                                 r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckstand2_goodopp.png",
-                                 r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckstand3_goodopp.png",
-                                 r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckstand4_goodopp.png"]
-        self.moveLeftSprites = [r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckmove1_good.png",
-                            r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckmove2_good.png",
-                            r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckmove3_good.png",
-                            r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckmove4_good.png"]
-        self.moveRightSprites = [r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckmove1_goodopp.png",
-                            r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckmove2_goodopp.png",
-                            r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckmove3_goodopp.png",
-                            r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\duckmove4_goodopp.png"]
-        self.sleeping = r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\sleepingduck.png"
+        self.stillRightSprites = [
+            getIMGpath("duckstand1_good.png"),
+            getIMGpath("duckstand2_good.png"),
+            getIMGpath("duckstand3_good.png"),
+            getIMGpath("duckstand4_good.png")]
+        self.stillLeftSprites = [
+            getIMGpath("duckstand1_goodopp.png"),
+            getIMGpath("duckstand2_goodopp.png"),
+            getIMGpath("duckstand3_goodopp.png"),
+            getIMGpath("duckstand4_goodopp.png")]
+        self.moveLeftSprites = [
+            getIMGpath("duckmove1_good.png"),
+            getIMGpath("duckmove2_good.png"),
+            getIMGpath("duckmove3_good.png"),
+            getIMGpath("duckmove4_good.png")]
+        self.moveRightSprites = [
+            getIMGpath("duckmove1_goodopp.png"),
+            getIMGpath("duckmove2_goodopp.png"),
+            getIMGpath("duckmove3_goodopp.png"),
+            getIMGpath("duckmove4_goodopp.png")]
+        self.sleeping = getIMGpath("sleepingduck.png")
         self.onCharHead = False
         # -1 for moving left, 0 for still, 1 for moving right
         self.state = 0.1

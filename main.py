@@ -24,7 +24,7 @@ def game_onScreenActivate(app):
     app.frame = 0
     app.stepsPerSecond = 25
     app.spawningDucks = False
-    app.ducksPerSecond = 100
+    app.ducksPerSecond = 4
     app.ducks = DuckFamily()
     app.steps = 0
 

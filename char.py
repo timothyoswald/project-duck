@@ -1,23 +1,24 @@
 from cmu_graphics import *
+from helper import getIMGpath
 
 class Character:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.speed = 50
+        self.speed = 10
         self.vy = 0
         self.jumpPower = 10
         self.gravity = 1
         self.onGround = False
-        self.stillRight = r"C:\Users\Nathan Xie\Desktop\Project Duck\Images\rightstill.png"
-        self.stillLeft = r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\leftstill.png"
+        self.stillRight = getIMGpath("rightstill.png")
+        self.stillLeft = getIMGpath("leftstill.png")
         self.spriteIndex = 0
-        self.moveRightSprites = [r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\right1.png",
-                                 r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\right2.png",
-                                 r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\right3.png"]
-        self.moveLeftSprites = [r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\left1.png",
-                                r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\left2.png",
-                                r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\left3.png"]
+        self.moveRightSprites = [getIMGpath("right1.png"),
+                                 getIMGpath("right2.png"),
+                                 getIMGpath("right3.png")]
+        self.moveLeftSprites = [getIMGpath("left1.png"),
+                                getIMGpath("left2.png"),
+                                getIMGpath("left3.png")]
         self.width, self.height = getImageSize(self.stillRight)
         self.ducksOnHead = []
         self.lastDir = 'right'

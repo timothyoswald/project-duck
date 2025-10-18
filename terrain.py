@@ -1,6 +1,7 @@
 from opensimplex import OpenSimplex, random_seed
 from cmu_graphics import *
 import random
+from helper import getIMGpath
 
 class Block:
     def __init__(self, x, y, width, height, texture):
@@ -21,9 +22,9 @@ class Terrain:
         self.rows = rows
         self.cols = cols
         self.blocks = []
-        self.textureTypes = {'dirt': r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\dirt.png",
-                             'grass': r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\grass.png",
-                             'stone': r"C:\Users\Nathan Xie\Desktop\Python Stuff\15-112 N25 Spicy Recis\Project Duck\Images\stone.png"}
+        self.textureTypes = {'dirt': getIMGpath("dirt.png"),
+                             'grass': getIMGpath("grass.png"),
+                             'stone': getIMGpath("stone.png")}
         self.makeTerrain(0)
 
     def makeTerrain(self, index):
